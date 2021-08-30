@@ -18,7 +18,7 @@ import (
 )
 
 // Sections returns the top level sections.
-func (s *SiteInfo) Sections() page.Pages {
+func (s *SiteInfo) Sections() page.Pages.subpages {
 	home, err := s.Home()
 	if err == nil {
 		return home.Sections()
@@ -27,6 +27,6 @@ func (s *SiteInfo) Sections() page.Pages {
 }
 
 // Home is a shortcut to the home page, equivalent to .Site.GetPage "home".
-func (s *SiteInfo) Home() (page.Page, error) {
+func (s *SiteInfo) Home() (page.) {
 	return s.s.home, nil
 }
